@@ -92,6 +92,7 @@ static void default_junk_free(void *ptr, size_t usize) {
 void (*junk_alloc_callback)(void *ptr, size_t size) = &default_junk_alloc;
 void (*junk_free_callback)(void *ptr, size_t size) = &default_junk_free;
 
+bool	opt_zero = false;
 unsigned	opt_narenas = 0;
 fxp_t		opt_narenas_ratio = FXP_INIT_INT(4);
 
